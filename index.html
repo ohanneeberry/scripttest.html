@@ -1,0 +1,59 @@
+# scripttest.html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Page</title>
+    </head>
+    <body>
+
+        
+<p>How old are you?</p>
+
+<input id="age"/>
+
+<button onclick="myFunction()">Go</button>
+
+<p id="demo"></p>
+
+<div id="confirm" style="visibility: hidden;"> 
+    <button onclick="name()">Yes</button>
+    <button onclick="myFunction()">No</button>
+</div>
+
+
+<script> 
+var firstname = "Yohanna";
+var lastname = "Konardi";
+var numberofdogs = 3;
+var numberofcats = 2;
+var totalfuzzies = numberofcats + numberofdogs;
+var myname = firstname + lastname;
+var age = 20
+if (age<= 35)
+    {console.log ('Thats not old');}
+    else { console.log ('getting older, huh?');}
+console.log (totalfuzzies); 
+function myFunction() {
+    var age, voteable;
+    age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        voteable = "Error in input";
+    } else {
+        voteable =  "You are " + age + " years old?";
+    }
+    document.getElementById("confirm").style.visibility = "visible";
+    document.getElementById("demo").innerHTML = voteable;
+}
+
+function name() { 
+    console.log(myname);
+}{
+name();}
+    
+
+    
+
+</script>
+    </body>
+</html>
